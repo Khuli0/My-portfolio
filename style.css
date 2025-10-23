@@ -1,10 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-color: rgb(228, 228, 228);
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    color: rgb(0, 0, 0);
-    font-family: Arial, sans-serif;
-    display: flex;
-  
+  font-family: "Inter", sans-serif;
+  background-color: #f8f8fa;
+  color: #1c1c1e;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 8%;
+}
+
+/* Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1c1c1e;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #00b7ff;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 8%;
+  min-height: 80vh;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.intro {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.title span {
+  color: #00b7ff;
+}
+
+.description {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.primary {
+  background: #00b7ff;
+  color: #fff;
+}
+
+.primary:hover {
+  background: #007eaf;
+}
+
+.secondary {
+  border: 2px solid #015779;
+  color: #015779;
+}
+
+.secondary:hover {
+  background: #007eaf;
+  color: white;
+}
+
+/* Image */
+.hero-image {
+  position: relative;
+}
+
+.circle {
+  border: 2px solid #015779;
+  border-radius: 50%;
+  padding: 1rem;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle img {
+  border-radius: 50%;
+  width: 90%;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero-text {
+    max-width: 100%;
+  }
+  .circle {
+    width: 250px;
+    height: 250px;
+  }
 }
